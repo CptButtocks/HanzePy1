@@ -1,5 +1,5 @@
 def sortedMerge(L1, L2):
-    for x in L2 :
+    for x in L2:
         L1.append(x);
 
     output = [];
