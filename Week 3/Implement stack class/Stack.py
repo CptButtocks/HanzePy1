@@ -16,9 +16,12 @@ class Stack:
         self.elements.append(value);
 
     def pop(self):
-        result = self.elements[-1];
-        del self.elements[-1];
-        return result;
+        if len(self.elements) > 0:
+            result = self.elements[-1];
+            del self.elements[-1];
+            return result;
+        elif:
+            return None;
 
     def getSize(self):
         return len(self.elements);
