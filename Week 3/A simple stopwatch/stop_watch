@@ -1,0 +1,25 @@
+import datetime
+
+class StopWatch:
+
+    def __index__(self):
+        self.startTime = 0;
+        self.endTime = 0;
+
+    def StopWatch(self):
+        self.startTime = 0;
+
+    def start(self):
+        self.startTime = datetime.now();
+
+    def stop(self):
+        self.endTime = datetime.now();
+
+    def get_elapsed_time(self):
+        return self.endTime - self.startTime;
+
+    def getStartTime(self):
+        return self.startTime;
+
+    def getEndTime(self):
+        return self.endTime;
