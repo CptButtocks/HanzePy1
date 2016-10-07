@@ -1,4 +1,4 @@
-from stop_watch import StopWatch
+from .stop_watch import StopWatch
 size = 1000000
 stopWatch = StopWatch()
 sum = 0

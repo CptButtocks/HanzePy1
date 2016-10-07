@@ -1,3 +1,5 @@
+import numpy as np;
+
 ##############
 # exercise 6 #
 ##############
@@ -45,12 +47,13 @@ class Game:
         print()
 
     def get_winner(self):
+        #mirrir_board = [list(r[::1)]
         transposed_board = self.board.transpose()
         cols = self.board.tolist()
         rows = transposed_board.tolist()
         posdiag = [list(np.diagonal(self.board, i)) for i in range(-2, 3)]
         print(posdiag, '\n')
-        negdiag = [list(np.diagonal(transposed_board, i)) for i in range(-2, 3)]
+        negdiag = [list(np.diagonal(self.board.fliplr, i)) for i in range(-2, 3)]
         print(negdiag, '\n')
         all = (cols, rows, posdiag, negdiag)
         for lst in chain(*all): # for every list in the chain

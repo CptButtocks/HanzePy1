@@ -8,6 +8,8 @@ class Stack:
     def is_empty(self):
         if len(self.elements) > 0:
             return False;
+        else:
+            return True;
 
     def peek(self):
         return self.elements[-1];
@@ -20,7 +22,7 @@ class Stack:
             result = self.elements[-1];
             del self.elements[-1];
             return result;
-        elif:
+        else:
             return None;
 
     def getSize(self):
